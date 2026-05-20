@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+
+# macOS
+.DS_Store
+
+# Data files
+data/raw_videos/*
+data/debug_videos/*
+data/outputs/*
+data/camera_profiles/*.json
+
+# Keep folder structure
+!data/raw_videos/.gitkeep
+!data/debug_videos/
+!data/debug_videos/calibration/
+!data/debug_videos/segments/
+!data/outputs/.gitkeep
+!data/camera_profiles/.gitkeep
+
+# Model weights
+*.pt
+*.pth
+*.onnx
+
+# Logs
+*.log

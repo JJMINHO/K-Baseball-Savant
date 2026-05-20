@@ -1,0 +1,41 @@
+video:
+  path: data/raw_videos/sample.mp4
+
+camera:
+  profile_path: data/camera_profiles/sample_profile.json
+
+pitcher:
+  handedness: L
+  roi: [500, 350, 1050, 1050]
+
+pose:
+  model_path: yolov8n-pose.pt
+  conf_threshold: 0.25
+
+features:
+  wrist_conf_threshold: 0.5
+
+segment:
+  movement_threshold: 15.0
+  min_segment_length: 40
+  max_segment_length: 220
+  quiet_frames: 25
+  min_pose_confidence: 0.35
+
+release:
+  search_start_ratio: 0.15
+  search_end_ratio: 0.95
+  point_b_window: 8
+  min_pose_confidence: 0.35
+  min_elbow_angle: 80.0
+
+ball_detector:
+  enabled: false
+  model_alias: ball_tracking
+  conf_threshold: 0.10
+  imgsz: 960
+  roi_size: 180
+
+output:
+  debug_dir: data/debug_videos
+  csv_path: data/outputs/pitch_events.csv
